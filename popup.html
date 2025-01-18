@@ -43,10 +43,21 @@
     }
     .button-group {
       margin: 10px 0;
+      display: flex;
+      gap: 5px;
+    }
+    .button-group button {
+      flex: 1;
     }
     .divider {
       margin: 15px 0;
       border-top: 1px solid #dee2e6;
+    }
+    #current-page {
+      text-align: center;
+      margin: 5px 0;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
@@ -54,13 +65,19 @@
   <h2>Upwork Job Saver</h2>
   <div id="total-jobs">Total Jobs Saved: 0</div>
   
+  <button id="saveJob">Save Jobs from Current Page</button>
+  
+  <div class="divider"></div>
+  
+  <div id="current-page">Current Page: 1</div>
   <div class="button-group">
-    <button id="saveJob">Save Jobs from Current Page</button>
-    <button id="downloadJobs">Download All Jobs</button>
+    <button id="prevPage">← Previous Page</button>
+    <button id="nextPage">Next Page →</button>
   </div>
   
   <div class="divider"></div>
   
+  <button id="downloadJobs">Download All Jobs</button>
   <button id="clearJobs" class="danger">Clear All Saved Jobs</button>
   <div id="status"></div>
   
