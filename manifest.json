@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Upwork Job Saver",
+  "version": "1.0",
+  "description": "Save Upwork job listings to a local file",
+  "permissions": ["activeTab", "scripting", "storage", "downloads"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.upwork.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

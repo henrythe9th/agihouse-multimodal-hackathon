@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Listing Saver</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button.danger {
+      background-color: #dc3545;
+    }
+    button.danger:hover {
+      background-color: #c82333;
+    }
+    #status {
+      margin-top: 10px;
+      color: #666;
+      min-height: 20px;
+    }
+    #total-jobs {
+      margin: 10px 0;
+      padding: 8px;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 0.9em;
+      border: 1px solid #dee2e6;
+    }
+    .button-group {
+      margin: 10px 0;
+    }
+    .divider {
+      margin: 15px 0;
+      border-top: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upwork Job Saver</h2>
+  <div id="total-jobs">Total Jobs Saved: 0</div>
+  
+  <div class="button-group">
+    <button id="saveJob">Save Jobs from Current Page</button>
+    <button id="downloadJobs">Download All Jobs</button>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <button id="clearJobs" class="danger">Clear All Saved Jobs</button>
+  <div id="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
