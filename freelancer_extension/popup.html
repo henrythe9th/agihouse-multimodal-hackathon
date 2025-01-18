@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    button {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background-color: #14a800;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #118f00;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    .navigation {
+      display: flex;
+      gap: 5px;
+      margin: 10px 0;
+    }
+    .navigation button {
+      flex: 1;
+    }
+    #status {
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+      font-size: 14px;
+    }
+    .counter {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .source-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+    .upwork {
+      background-color: #14a800;
+      color: white;
+    }
+    .freelancer {
+      background-color: #0088cc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <button id="saveJob">Save Jobs from Current Page</button>
+    <div class="navigation">
+      <button id="prevPage">← Previous</button>
+      <button id="nextPage">Next →</button>
+    </div>
+    <div id="current-page" class="counter">Current Page: 1</div>
+    <div id="total-jobs" class="counter">Total Jobs Saved: 0</div>
+    <div id="status">Ready to save jobs</div>
+    <button id="downloadJobs">Download All Jobs</button>
+    <button id="clearJobs">Clear All Jobs</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

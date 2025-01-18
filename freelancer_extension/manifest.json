@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Freelance Job Saver",
+  "version": "1.0",
+  "description": "Save job listings from Freelancer.com",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://www.freelancer.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Save Freelancer.com Jobs"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.freelancer.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
